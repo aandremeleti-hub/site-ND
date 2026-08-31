@@ -1,5 +1,6 @@
 .section {
-  background-color: var(--color-light); /* Fundo base da seção (creme) */
+  background-color: var(--color-light);
+  /* Fundo base da seção (creme) */
   padding: 10rem 0;
   color: var(--color-dark);
 }
@@ -37,11 +38,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 40px 30px; /* Um pouco mais alto que as soluções originais se houver texto */
+  padding: 40px 30px;
+  /* Um pouco mais alto que as soluções originais se houver texto */
   border: 1px solid #DFDFDF;
   background-color: transparent;
   transition: all 0.3s ease;
-  cursor: pointer;
   position: relative;
 }
 

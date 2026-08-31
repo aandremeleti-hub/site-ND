@@ -32,6 +32,7 @@ export function NossosServicos() {
       /> */}
 
       <ServiceBlock
+        id="obras-residenciais"
         title="Obras Residenciais"
         spanText="NOVA DIMENSÃO ENGENHARIA E CONSTRUTORA"
         paragraphs={[
@@ -47,6 +48,7 @@ export function NossosServicos() {
       />
 
       <ServiceBlock
+        id="gerenciamento-de-obras"
         title="Gerenciamento de Obras"
         spanText="NOVA DIMENSÃO ENGENHARIA E CONSTRUTORA"
         paragraphs={[
@@ -61,6 +63,7 @@ export function NossosServicos() {
       />
 
       <ServiceBlock
+        id="projetos-complementares"
         title="Projetos Complementares"
         spanText="NOVA DIMENSÃO ENGENHARIA E CONSTRUTORA"
         paragraphs={[

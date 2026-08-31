@@ -54,9 +54,6 @@ export function Identity() {
                   <h3 className={styles.cardTitle}>{item.title}</h3>
                   <p className={styles.cardDesc}>{item.desc}</p>
                 </div>
-                <span className={styles.link}>
-                  Saiba mais <ArrowRightIcon />
-                </span>
               </div>
             </ScrollReveal>
           ))}

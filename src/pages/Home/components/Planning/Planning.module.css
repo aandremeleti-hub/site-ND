@@ -2,6 +2,7 @@
   background-color: var(--color-light);
   padding: 10rem 0;
   color: var(--color-dark);
+  scroll-margin-top: 80px;
 }
 
 .gridContainer {

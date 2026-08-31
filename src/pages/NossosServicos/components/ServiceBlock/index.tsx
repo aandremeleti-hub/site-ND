@@ -5,6 +5,7 @@ import { Button } from '../../../../components/ui/Button';
 import { ScrollReveal } from '../../../../components/ui/ScrollReveal';
 
 interface ServiceBlockProps {
+  id?: string;
   title: string;
   spanText: string;
   paragraphs: string[];
@@ -16,6 +17,7 @@ interface ServiceBlockProps {
 }
 
 export function ServiceBlock({
+  id,
   title,
   spanText,
   paragraphs,
@@ -33,7 +35,7 @@ export function ServiceBlock({
         styles.themeLight;
 
   return (
-    <section className={`${styles.section} ${themeClass}`}>
+    <section id={id} className={`${styles.section} ${themeClass}`}>
       <Container>
         <div className={styles.grid}>
 

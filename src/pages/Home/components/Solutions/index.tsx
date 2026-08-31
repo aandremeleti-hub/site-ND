@@ -1,3 +1,4 @@
+import { useNavigate, Link } from 'react-router-dom';
 import { Container } from '../../../../components/layout/Container';
 import { ScrollReveal } from '../../../../components/ui/ScrollReveal';
 import styles from './Solutions.module.css';
@@ -12,29 +13,35 @@ const solutions = [
     id: 1,
     icon: iconConstrucoesResidenciais,
     title: 'Construção\nResidencial',
-    desc: 'Casas e residências executadas do projeto à chave, com fidelidade ao projeto arquitetônico executivo e às especificações aprovadas.'
+    desc: 'Casas e residências executadas do projeto à chave, com fidelidade ao projeto arquitetônico executivo e às especificações aprovadas.',
+    link: '/nossos-servicos#obras-residenciais'
   },
   {
     id: 2,
     icon: iconReformasPremium,
     title: 'Reforma Residencial\nDe Alto Padrão',
-    desc: 'Apartamentos e casas. Obra em imóvel ocupado, com convivência, portaria e vizinhança preservadas do primeiro dia à entrega.'
+    desc: 'Apartamentos e casas. Obra em imóvel ocupado, com convivência, portaria e vizinhança preservadas do primeiro dia à entrega.',
+    link: '/nossos-servicos#obras-residenciais'
   },
   {
     id: 3,
     icon: iconCorporativos,
     title: 'Gerenciamento \nDe Obras',
-    desc: 'Escritórios, lojas e ambientes de negócio, com o padrão estético da marca mantido e interferência mínima na operação do cliente.'
+    desc: 'Escritórios, lojas e ambientes de negócio, com o padrão estético da marca mantido e interferência mínima na operação do cliente.',
+    link: '/nossos-servicos#gerenciamento-de-obras'
   },
   {
     id: 4,
     icon: iconObra,
     title: 'Compatibilização\ne Viabilidade',
-    desc: 'Análise técnica de projeto antes da decisão de obra: interferências, custo estimado e o que a edificação permite.'
+    desc: 'Análise técnica de projeto antes da decisão de obra: interferências, custo estimado e o que a edificação permite.',
+    link: '/nossos-servicos#projetos-complementares'
   }
 ];
 
 export function Solutions() {
+  const navigate = useNavigate();
+
   return (
     <section className={styles.solutionsSection}>
       <ScrollReveal>
@@ -50,7 +57,19 @@ export function Solutions() {
         <Container>
           <div className={styles.cardsGrid}>
             {solutions.map((solution) => (
-              <div key={solution.id} className={styles.card}>
+              <div
+                key={solution.id}
+                className={styles.card}
+                onClick={() => navigate(solution.link)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    navigate(solution.link);
+                  }
+                }}
+              >
                 <div className={styles.contentGroup}>
                   <img src={solution.icon} alt="" aria-hidden="true" className={styles.icon} loading="lazy" />
                   <h3 className={styles.cardTitle}>
@@ -63,12 +82,16 @@ export function Solutions() {
                   </h3>
                   <p className={styles.cardDesc}>{solution.desc}</p>
                 </div>
-                <a href="#" className={styles.link}>
+                <Link
+                  to={solution.link}
+                  className={styles.link}
+                  onClick={(e) => e.stopPropagation()}
+                >
                   Saiba mais
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.arrowIcon}>
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Container } from '../Container';
+import { smoothScrollTo } from '../../../utils/scroll';
 import styles from './Footer.module.css';
 
 import logoNovaDimensao from '../../../assets/logoNovaDimensao.svg';
@@ -43,6 +44,14 @@ const MailIcon = () => (
 
 
 export function Footer() {
+  const location = useLocation();
+
+  const handleServiceClick = (targetId: string) => {
+    if (location.pathname === '/nossos-servicos') {
+      smoothScrollTo(targetId, 900, 90);
+    }
+  };
+
   return (
     <footer className={styles.footer}>
       <Container>
@@ -72,7 +81,7 @@ export function Footer() {
             <ul className={styles.linkList}>
               <li className={styles.linkItem}><Link to="/">Início</Link></li>
               <li className={styles.linkItem}><Link to="/sobre">Sobre</Link></li>
-              <li className={styles.linkItem}><Link to="/servicos">Nossos Serviços</Link></li>
+              <li className={styles.linkItem}><Link to="/nossos-servicos">Nossos Serviços</Link></li>
               <li className={styles.linkItem}><Link to="/projetos">Projetos</Link></li>
               <li className={styles.linkItem}><Link to="/contato">Contato</Link></li>
             </ul>
@@ -82,9 +91,30 @@ export function Footer() {
           <div className={styles.linkColumn}>
             <h3 className={styles.title}>Serviços</h3>
             <ul className={styles.linkList}>
-              <li className={styles.linkItem}><Link to="/servicos">Gerenciamentos de Obras</Link></li>
-              <li className={styles.linkItem}><Link to="/servicos">Obras Residenciais</Link></li>
-              <li className={styles.linkItem}><Link to="/servicos">Projetos de Engenharia</Link></li>
+              <li className={styles.linkItem}>
+                <Link
+                  to="/nossos-servicos#gerenciamento-de-obras"
+                  onClick={() => handleServiceClick('gerenciamento-de-obras')}
+                >
+                  Gerenciamento de Obras
+                </Link>
+              </li>
+              <li className={styles.linkItem}>
+                <Link
+                  to="/nossos-servicos#obras-residenciais"
+                  onClick={() => handleServiceClick('obras-residenciais')}
+                >
+                  Obras Residenciais
+                </Link>
+              </li>
+              <li className={styles.linkItem}>
+                <Link
+                  to="/nossos-servicos#projetos-complementares"
+                  onClick={() => handleServiceClick('projetos-complementares')}
+                >
+                  Projetos de Engenharia
+                </Link>
+              </li>
             </ul>
           </div>
 

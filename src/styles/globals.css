@@ -2,8 +2,8 @@
 
 /* @font-face para BWGradual será inserido aqui quando a fonte local for adicionada */
 
-html, body {
-  overflow-x: hidden;
+html {
+  scroll-behavior: smooth;
 }
 
 body {

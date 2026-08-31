@@ -23,7 +23,7 @@ export function Planning() {
   ];
 
   return (
-    <section className={styles.planningSection}>
+    <section id="metodologia" className={styles.planningSection}>
       <ScrollReveal>
         <Container>
           <div className={styles.gridContainer}>

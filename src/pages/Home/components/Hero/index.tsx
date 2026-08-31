@@ -1,9 +1,14 @@
 import { Container } from '../../../../components/layout/Container';
 import { Button } from '../../../../components/ui/Button';
+import { smoothScrollTo } from '../../../../utils/scroll';
 import videoND from '../../../../assets/VideoND.mp4';
 import styles from './Hero.module.css';
 
 export function Hero() {
+  const handleScrollToMethodology = () => {
+    smoothScrollTo('metodologia', 1100, 80);
+  };
+
   return (
     <section className={styles.heroSection}>
       {/* Video Background */}
@@ -35,7 +40,9 @@ export function Hero() {
               Na Nova Dimensão Engenharia, acreditamos que uma obra de excelência começa muito antes da execução. Planejamento e gestão técnica não são fim — são o que transforma a intenção de cada cliente em resultado entregue no prazo, no custo e no padrão combinados.
             </p>
             <div className={styles.actions}>
-              <Button variant="primary">Nossa Metodologia</Button>
+              <Button variant="primary" onClick={handleScrollToMethodology}>
+                Nossa Metodologia
+              </Button>
               <Button variant="outline">Vamos Conversar</Button>
             </div>
           </div>
