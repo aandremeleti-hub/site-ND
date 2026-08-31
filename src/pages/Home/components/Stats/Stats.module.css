@@ -1,0 +1,75 @@
+.statsSection {
+  background-color: var(--color-dark);
+  padding: 4rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Separação sutil do Hero caso necessário */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Divisores sutis nos itens 1 e 2 */
+.statItem:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.number {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.primaryColor {
+  color: var(--color-primary);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  color: var(--color-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .statItem:not(:last-child)::after {
+    display: none;
+  }
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

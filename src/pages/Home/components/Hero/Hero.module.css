@@ -1,0 +1,104 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  /* Conforme solicitado, altura de 85vh */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* Centraliza verticalmente o conteúdo */
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7)40%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 2;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.textContent {
+  max-width: 740px;
+}
+
+.subtitle {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-regular);
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.highlightBlock {
+  display: block;
+  color: var(--color-primary);
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--color-white);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+  .heroSection {
+    padding-top: 50px;
+    /* Compensação para o Header Fixo */
+    min-height: 85vh;
+    height: auto;
+    padding-bottom: 4rem;
+  }
+
+  .title {
+    font-size: var(--font-size-h2);
+  }
+
+  .description {
+    font-size: var(--font-size-body);
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,124 @@
+.section {
+  background-color: var(--color-light);
+  padding: 10rem 0;
+  color: var(--color-dark-alt);
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Coluna de Imagem */
+.imageColumn {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Coluna de Texto */
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.headerGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.paragraphsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subtitle {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--font-size-details);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  color: var(--color-dark);
+  font-weight: var(--font-medium);
+  line-height: 1.1;
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--color-dark-alt);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Stats */
+.statsGroup {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.statNumber {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: var(--font-bold);
+  color: var(--color-dark);
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: var(--font-bold);
+  color: var(--color-dark-alt);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .statsGroup {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .statItem {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

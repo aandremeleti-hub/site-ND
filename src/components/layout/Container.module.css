@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  max-width: 1200px; /* Ou o max-width definido no layout final */
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Aumenta a margem em desktop/base */
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 3rem; /* Margem bem generosa no tablet para não esticar muito */
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.5rem; /* Margem de segurança segura no mobile */
+  }
+}

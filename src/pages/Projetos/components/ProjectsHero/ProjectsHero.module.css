@@ -1,0 +1,191 @@
+.section {
+  padding: 8rem 0 4rem 0;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headerGroup {
+  margin-bottom: 2rem;
+}
+
+.spanText {
+  font-family: var(--font-body);
+  font-size: var(--font-size-details);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 55px;
+  font-weight: var(--font-regular);
+  line-height: 1.1;
+  color: var(--color-dark);
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: calc(100vh - 22rem);
+  min-height: 450px;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.cardImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  position: relative;
+  z-index: 3;
+  color: var(--color-white);
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: var(--font-medium);
+  margin-bottom: 0.5rem;
+}
+
+.cardDesc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* Specific Grid Items */
+/* Esquerda: 2 cards empilhados como retangulos */
+.card1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Centro: 1 card alto */
+.card3 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+/* Direita: 2 cards empilhados como quadrado */
+.card4 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.card5 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsivity */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+    grid-auto-rows: 300px;
+    height: auto;
+  }
+
+  .card1 {
+    grid-column: span 2;
+  }
+
+  .card2 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .card3 {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .card4 {
+    grid-column: span 1;
+  }
+
+  .card5 {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-top: 5rem;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 250px;
+    height: auto;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}

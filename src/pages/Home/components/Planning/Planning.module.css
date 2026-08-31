@@ -1,0 +1,89 @@
+.planningSection {
+  background-color: var(--color-light);
+  padding: 10rem 0;
+  color: var(--color-dark);
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.leftColumn {
+  padding-right: 2rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-regular);
+  color: var(--color-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--color-dark);
+  opacity: 0.8;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.rightColumn {
+  padding-left: 4rem;
+  border-left: 1px solid rgba(20, 26, 43, 0.1);
+  /* Divisória sutil --color-dark com opacidade */
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 2rem;
+}
+
+.cardTitle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  /* Forçando maiúsculo via CSS conforme regra */
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.cardDescription {
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  color: var(--color-dark);
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .leftColumn {
+    padding-right: 0;
+  }
+
+  .rightColumn {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(20, 26, 43, 0.1);
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+}

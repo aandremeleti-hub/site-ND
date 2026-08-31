@@ -1,0 +1,116 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: var(--color-dark);
+  padding: 0.1rem 0;
+  /* Espaçamento vertical */
+  border-bottom: 2px solid var(--color-primary);
+  /* Separador suave opcional */
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 180px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-medium);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+.navLink.active {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.actionContainer {
+  display: flex;
+  align-items: center;
+}
+
+.mobileAction {
+  display: none;
+}
+
+.menuButton {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--color-light);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 60;
+}
+
+/* Responsividade do Header */
+@media (max-width: 1024px) {
+  .logo {
+    width: 150px;
+  }
+  
+  .actionContainer {
+    display: none; /* Esconde o botão normal no mobile */
+  }
+
+  .menuButton {
+    display: block; /* Mostra o ícone de hambúrguer */
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 350px;
+    height: 100vh;
+    background-color: var(--color-dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: right 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 55;
+  }
+
+  .navOpen {
+    right: 0;
+  }
+
+  .navLink {
+    font-size: var(--font-size-h4);
+  }
+
+  .mobileAction {
+    display: flex;
+    margin-top: 2rem;
+  }
+}

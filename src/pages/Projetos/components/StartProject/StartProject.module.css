@@ -1,0 +1,129 @@
+.section {
+  padding: 8rem 0;
+  background-color: var(--color-dark-alt);
+  /* Fundo escuro como na imagem */
+  color: var(--color-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.imageColumn {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.contentColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.headerGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.spanText {
+  font-family: var(--font-body);
+  font-size: var(--font-size-details);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  letter-spacing: 1px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-regular);
+  color: var(--color-white);
+  line-height: 1.1;
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.stepNumber {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  color: var(--color-white);
+  font-weight: var(--font-light);
+  line-height: 1;
+  border-bottom: 2px solid var(--color-primary);
+  /* Underline azul/primário que tem no anexo 2 */
+  padding-bottom: 0.2rem;
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 0.5rem;
+}
+
+.stepTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-medium);
+  color: var(--color-white);
+}
+
+.stepDesc {
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+.buttonWrapper {
+  margin-top: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .imageColumn {
+    order: 2;
+    /* No mobile a imagem geralmente vai para baixo */
+  }
+
+  .contentColumn {
+    order: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 5rem 0;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}

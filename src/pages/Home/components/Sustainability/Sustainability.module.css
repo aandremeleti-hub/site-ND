@@ -1,0 +1,114 @@
+.section {
+  background-color: var(--color-dark-alt);
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+}
+
+/* Background Details */
+.detailLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  height: 50%;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.detailRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotate(-90deg);
+  height: 50%;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  /* To be above the details */
+}
+
+/* LEFT COLUMN */
+.leftColumn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+}
+
+/* RIGHT COLUMN */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  color: var(--color-white);
+  font-weight: var(--font-medium);
+  line-height: 1.2;
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  padding: 1rem 2rem;
+  font-family: var(--font-body);
+  font-weight: var(--font-bold);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .detailLeft,
+  .detailRight {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 5rem 0;
+  }
+}

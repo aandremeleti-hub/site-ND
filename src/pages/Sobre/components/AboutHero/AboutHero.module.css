@@ -1,0 +1,156 @@
+.section {
+  background-color: var(--color-white);
+  /* Baseado no anexo parece ser fundo claro */
+  padding: 6rem 0 5rem 0;
+  /* Espaço para o header */
+  color: var(--color-dark-alt);
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Coluna de Imagem */
+.imageColumn {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Coluna de Texto */
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.headerGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.paragraphsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 55px;
+  color: var(--color-dark);
+  font-weight: var(--font-regular);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--color-dark-alt);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Separador (linha visual entre texto e os numeros) */
+.separator {
+  border: none;
+  height: 1px;
+  background-color: var(--color-dark);
+  opacity: 0.1;
+  margin: 1rem 0;
+}
+
+/* Stats */
+.statsGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.statNumber {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: var(--font-bold);
+  color: var(--color-dark);
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: var(--font-bold);
+  color: var(--color-dark-alt);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.statNote {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--color-dark-alt);
+  opacity: 0.6;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.25rem;
+  white-space: nowrap;
+}
+
+/* Cor primária para números como "97%" (opcional caso o anexo mostre cores alternadas) */
+.statItem:nth-child(2) .statNumber {
+  color: var(--color-primary);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .imageColumn {
+    order: 2;
+  }
+
+  .textColumn {
+    order: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-top: 4rem
+  }
+
+  .statsGroup {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .statItem {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

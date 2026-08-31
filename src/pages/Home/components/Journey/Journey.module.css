@@ -1,0 +1,200 @@
+.journeySection {
+  background-color: var(--color-dark);
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header (Grupo 1) */
+.headerGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5rem;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-details);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  color: var(--color-white);
+  line-height: 1.1;
+  font-weight: var(--font-medium);
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  color: var(--color-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  /* Alinhamento visual fino para alinhar com o título */
+}
+
+/* Steps (Grupo 2) */
+.stepsContainer {
+  position: relative;
+  width: 100%;
+}
+
+.connectingLine {
+  position: absolute;
+  top: 2rem;
+  /* Metade da altura do iconWrapper (4rem) */
+  left: 2rem;
+  /* Centro do primeiro iconWrapper (width 4rem / 2) */
+  width: calc(5 * ((100% + 1.5rem) / 6));
+  /* Distância exata até o centro do último ícone considerando o gap de 1.5rem */
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+}
+
+.dot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(196, 128, 8, 0.8);
+  transition: left 1s ease-in-out;
+  z-index: 2;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stepCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.iconWrapper {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--color-dark);
+  /* Fundo sólido para cobrir a linha */
+  margin-bottom: 2rem;
+  transition: all 0.5s ease;
+}
+
+.iconImg {
+  width: 1.6rem;
+  height: 1.6rem;
+  opacity: 0.9;
+  transition: opacity 0.5s ease;
+  /* Transiciona apenas a opacidade, a cor do filtro entra instantaneamente */
+}
+
+/* Animações e estado Active */
+.stepCard.active .iconWrapper {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px rgba(196, 128, 8, 0.15);
+}
+
+.stepCard.active .iconImg {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(76%) saturate(1831%) hue-rotate(1deg) brightness(93%) contrast(93%);
+  opacity: 1;
+}
+
+.stepCard.active .stepTitle {
+  color: var(--color-primary);
+}
+
+.stepTitle {
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  transition: color 0.5s ease;
+}
+
+.stepDesc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  /* Slightly smaller than caption for long text */
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  padding-right: 0.25rem;
+  /* Dá um respiro entre as descrições das colunas */
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  /* A linha conectora agora se ajusta matematicamente, não precisa de sobrescrita de largura aqui */
+}
+
+@media (max-width: 1024px) {
+  .stepsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4rem;
+  }
+
+  .connectingLine {
+    display: none;
+    /* A linha não funciona bem quando os itens quebram em múltiplas linhas */
+  }
+}
+
+@media (max-width: 768px) {
+  .headerGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .stepCard {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .iconWrapper {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  
+  .stepTitle {
+    margin-bottom: 0.5rem;
+  }
+}
