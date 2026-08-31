@@ -7,6 +7,7 @@ interface ScrollRevealProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right' | 'none';
   threshold?: number;
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 export function ScrollReveal({ 
@@ -14,7 +15,8 @@ export function ScrollReveal({
   className = '', 
   delay = 0, 
   direction = 'up',
-  threshold = 0.1 
+  threshold = 0.1,
+  onClick
 }: ScrollRevealProps) {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
@@ -60,6 +62,7 @@ export function ScrollReveal({
       ref={elementRef}
       className={`${styles.revealBase} ${getDirectionClass()} ${isVisible ? styles.visible : ''} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
+      onClick={onClick}
     >
       {children}
     </div>
