@@ -29,7 +29,7 @@ export function Home() {
       <Container>
         <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--color-dark)', opacity: 0.1, margin: 0 }} />
       </Container>
-      <Feedbacks />
+      {/* <Feedbacks /> */}
       <Sustainability />
     </>
   );
