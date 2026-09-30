@@ -8,7 +8,7 @@ import { Solutions } from './components/Solutions';
 import { Projects } from './components/Projects';
 import { BehindTheScenes } from './components/BehindTheScenes';
 import { AboutCEO } from './components/AboutCEO';
-import { Feedbacks } from './components/Feedbacks';
+// import { Feedbacks } from './components/Feedbacks';
 import { Sustainability } from './components/Sustainability';
 
 export function Home() {
