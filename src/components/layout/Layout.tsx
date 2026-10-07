@@ -2,6 +2,7 @@ import { Outlet, ScrollRestoration } from 'react-router-dom';
 import { useScrollToHash } from '../../hooks/useScrollToHash';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { WhatsAppButton } from '../ui/WhatsAppButton';
 import styles from './Layout.module.css';
 
 export function Layout() {
@@ -14,6 +15,7 @@ export function Layout() {
       <main className={styles.main}>
         <Outlet />
       </main>
+      <WhatsAppButton />
       <Footer />
     </div>
   );
