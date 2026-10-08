@@ -1,6 +1,7 @@
 import { SEO } from '../../components/SEO';
 import { ServicesHero } from './components/ServicesHero';
 import { ServiceBlock } from './components/ServiceBlock';
+import { openWhatsApp } from '../../utils/whatsapp';
 
 // Import Illustrations
 import illustrationGerenciamento from '../../assets/illustrationGerenciamento.svg';
@@ -41,6 +42,7 @@ export function NossosServicos() {
           "O escopo é fechado por escrito antes do preço. O projeto é construído como foi desenhado — a autoria é da arquitetura, a execução é nossa. Cliente e escritório de arquitetura acompanham o mesmo relatório de andamento físico, técnico e financeiro. E a residência é entregue documentada: manual do proprietário, garantias, as built e plano de manutenção."
         ]}
         buttonText="Conheça-nos melhor"
+        onButtonClick={() => openWhatsApp('Olá! Gostaria de saber mais sobre Obras Residenciais.')}
         imageSrc={illustrationObrasResidenciais}
         imageAlt="Obra residencial finalizada com piscina"
         theme="dark"
@@ -56,6 +58,7 @@ export function NossosServicos() {
           "Com controle rigoroso de custos e prazos, buscamos assegurar a execução dentro do orçamento e cronograma estabelecidos. Atuamos com transparência e comunicação clara para garantir uma experiência segura e bem-sucedida."
         ]}
         buttonText="Conheça-nos melhor"
+        onButtonClick={() => openWhatsApp('Olá! Gostaria de saber mais sobre Gerenciamento de Obras.')}
         imageSrc={illustrationGerenciamento}
         imageAlt="Equipe trabalhando no gerenciamento de uma obra"
         theme="light"
@@ -71,6 +74,7 @@ export function NossosServicos() {
           "Indicamos os projetistas de cada disciplina, coordenamos o desenvolvimento e compatibilizamos as pranchas com o projeto de arquitetura antes da execução. Também conduzimos as aprovações em condomínio e nos órgãos competentes."
         ]}
         buttonText="Conheça-nos melhor"
+        onButtonClick={() => openWhatsApp('Olá! Gostaria de saber mais sobre Projetos Complementares.')}
         imageSrc={illustrationProjetosEngenharia}
         imageAlt="Projeto de engenharia em 3D"
         theme="light"

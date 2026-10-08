@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Container } from '../Container';
 import { Button } from '../../ui/Button';
 import logo from '../../../assets/logoNovaDimensao.svg';
+import { openWhatsApp } from '../../../utils/whatsapp';
 import styles from './Header.module.css';
 
 export function Header() {
@@ -82,12 +83,15 @@ export function Header() {
             </NavLink>
 
             <div className={styles.mobileAction}>
-              <Button variant="primary" onClick={closeMenu}>Converse Conosco</Button>
+              <Button variant="primary" onClick={() => {
+                closeMenu();
+                openWhatsApp('Olá! Gostaria de saber mais sobre os serviços da Nova Dimensão Engenharia e Construtora.');
+              }}>Converse Conosco</Button>
             </div>
           </nav>
 
           <div className={styles.actionContainer}>
-            <Button variant="primary">Converse Conosco</Button>
+            <Button variant="primary" onClick={() => openWhatsApp('Olá! Gostaria de saber mais sobre os serviços da Nova Dimensão Engenharia e Construtora.')}>Converse Conosco</Button>
           </div>
 
           {/* Botão Hambúrguer para Mobile */}

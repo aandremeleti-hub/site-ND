@@ -1,5 +1,6 @@
 import { Container } from '../../../../components/layout/Container';
 import { ScrollReveal } from '../../../../components/ui/ScrollReveal';
+import { openWhatsApp } from '../../../../utils/whatsapp';
 import styles from './Sustainability.module.css';
 
 import detailsNovaDimensao from '../../../../assets/detailsNovaDimensao.svg';
@@ -38,7 +39,7 @@ export function Sustainability() {
               Construções com certificação Green Building Council promovem eficiência energética, uso consciente da água e melhor qualidade dos ambientes internos, reduzindo impactos ambientais e custos operacionais.
             </p>
 
-            <button className={styles.button}>
+            <button className={styles.button} onClick={() => openWhatsApp('Olá! Gostaria de saber mais sobre os serviços da Nova Dimensão Engenharia e Construtora.')}>
               Vamos Conversar
             </button>
             </ScrollReveal>

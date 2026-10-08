@@ -1,6 +1,7 @@
 import { Container } from '../../../../components/layout/Container';
 import { Button } from '../../../../components/ui/Button';
 import { smoothScrollTo } from '../../../../utils/scroll';
+import { openWhatsApp } from '../../../../utils/whatsapp';
 import videoND from '../../../../assets/VideoND.mp4';
 import styles from './Hero.module.css';
 
@@ -43,7 +44,7 @@ export function Hero() {
               <Button variant="primary" onClick={handleScrollToMethodology}>
                 Nossa Metodologia
               </Button>
-              <Button variant="outline">Vamos Conversar</Button>
+              <Button variant="outline" onClick={() => openWhatsApp('Olá! Gostaria de saber mais sobre os serviços da Nova Dimensão Engenharia e Construtora.')}>Vamos Conversar</Button>
             </div>
           </div>
         </Container>

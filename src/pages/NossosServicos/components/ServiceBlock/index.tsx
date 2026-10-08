@@ -10,6 +10,7 @@ interface ServiceBlockProps {
   spanText: string;
   paragraphs: string[];
   buttonText?: string;
+  onButtonClick?: () => void;
   imageSrc: string;
   imageAlt: string;
   theme: 'dark' | 'dark-alt' | 'light';
@@ -22,6 +23,7 @@ export function ServiceBlock({
   spanText,
   paragraphs,
   buttonText,
+  onButtonClick,
   imageSrc,
   imageAlt,
   theme,
@@ -61,7 +63,7 @@ export function ServiceBlock({
 
             {buttonText && (
               <ScrollReveal direction="up" delay={200} className={styles.buttonWrapper}>
-                <Button onClick={() => navigate('/contato')}>
+                <Button onClick={onButtonClick ? onButtonClick : () => navigate('/contato')}>
                   {buttonText}
                 </Button>
               </ScrollReveal>
