@@ -4,7 +4,7 @@ import { ScrollReveal } from '../../../../components/ui/ScrollReveal';
 import { useCountUp } from '../../../../hooks/useCountUp';
 import styles from './AboutCEO.module.css';
 
-import illustrationLuiz from '../../../../assets/illustrationLuiz.svg';
+import illustrationLuiz from '../../../../assets/illustrationLuiz.webp';
 
 interface StatItemProps {
   target: number;

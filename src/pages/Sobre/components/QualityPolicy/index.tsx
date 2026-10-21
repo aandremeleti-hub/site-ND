@@ -2,7 +2,7 @@ import { Container } from '../../../../components/layout/Container';
 import { ScrollReveal } from '../../../../components/ui/ScrollReveal';
 import styles from './QualityPolicy.module.css';
 
-import illustrationQualidade from '../../../../assets/IllustrationQualidade.svg';
+import illustrationQualidade from '../../../../assets/illustrationQualidade.webp';
 
 const leftItems = [
   {

@@ -6,36 +6,35 @@ import { ScrollReveal } from '../../../../components/ui/ScrollReveal';
 import { ProjectModal, type ProjectModalData } from '../../../../components/ui/ProjectModal';
 import styles from './ProjectsHero.module.css';
 
-// ----- Projeto 1
-import projeto1_01 from '../../../../assets/projetos/projeto1-01.svg';
-import projeto1_02 from '../../../../assets/projetos/projeto1-02.svg';
-import projeto1_03 from '../../../../assets/projetos/projeto1-03.svg';
-import projeto1_04 from '../../../../assets/projetos/projeto1-04.svg';
+// ----- Projeto 1: RPJ (Residência Pico do Jaraguá)
+import rpj_01 from '../../../../assets/projetos/rpj-01.webp';
+import rpj_02 from '../../../../assets/projetos/rpj-02.webp';
+import rpj_03 from '../../../../assets/projetos/rpj-03.webp';
+import rpj_04 from '../../../../assets/projetos/rpj-04.webp';
 
-// ----- Projeto 2
-import projeto2_01 from '../../../../assets/projetos/projeto2-01.svg';
-import projeto2_02 from '../../../../assets/projetos/projeto2-02.svg';
-import projeto2_03 from '../../../../assets/projetos/projeto2-03.svg';
-import projeto2_04 from '../../../../assets/projetos/projeto2-04.svg';
+// ----- Projeto 2: MJP (Residência Jardim Paulistano)
+import mjp_01 from '../../../../assets/projetos/mjp-01.webp';
+import mjp_02 from '../../../../assets/projetos/mjp-02.webp';
+import mjp_03 from '../../../../assets/projetos/mjp-03.webp';
+import mjp_04 from '../../../../assets/projetos/mjp-04.webp';
 
-// ----- Projeto 3
-import projeto3_01 from '../../../../assets/projetos/projeto3-01.svg';
-import projeto3_02 from '../../../../assets/projetos/projeto3-02.svg';
-import projeto3_03 from '../../../../assets/projetos/projeto3-03.svg';
-import projeto3_04 from '../../../../assets/projetos/projeto3-04.svg';
+// ----- Projeto 3: CMG (Residência Jardim Paulistano)
+import cmg_01 from '../../../../assets/projetos/cmg-01.webp';
+import cmg_02 from '../../../../assets/projetos/cmg-02.webp';
+import cmg_03 from '../../../../assets/projetos/cmg-03.webp';
+import cmg_04 from '../../../../assets/projetos/cmg-04.webp';
 
-// ----- Projeto 4
-import projeto4_01 from '../../../../assets/projetos/projeto4-01.svg';
-import projeto4_02 from '../../../../assets/projetos/projeto4-02.svg';
-import projeto4_03 from '../../../../assets/projetos/projeto4-03.svg';
-import projeto4_04 from '../../../../assets/projetos/projeto4-04.svg';
+// ----- Projeto 4: AMP (Residência Perdizes)
+import amp_01 from '../../../../assets/projetos/amp-01.webp';
+import amp_02 from '../../../../assets/projetos/amp-02.webp';
+import amp_03 from '../../../../assets/projetos/amp-03.webp';
+import amp_04 from '../../../../assets/projetos/amp-04.webp';
 
-// ----- Projeto 5
-import projeto5_01 from '../../../../assets/projetos/projeto5-01.svg';
-import projeto5_02 from '../../../../assets/projetos/projeto5-02.svg';
-import projeto5_03 from '../../../../assets/projetos/projeto5-03.svg';
-import projeto5_04 from '../../../../assets/projetos/projeto5-04.svg';
-
+// ----- Projeto 5: RVM (Residência Jardim Paulistano)
+import rvm_01 from '../../../../assets/projetos/rvm-01.webp';
+import rvm_02 from '../../../../assets/projetos/rvm-02.webp';
+import rvm_03 from '../../../../assets/projetos/rvm-03.webp';
+import rvm_04 from '../../../../assets/projetos/rvm-04.webp';
 
 interface ProjectItem extends ProjectModalData {
   image: string;
@@ -45,11 +44,11 @@ interface ProjectItem extends ProjectModalData {
 const projects: ProjectItem[] = [
   {
     id: 1,
-    badge: 'PROJETO RESIDENCIAL',
-    title: 'RPJ Residencia',
-    description: 'Loren ipsum dolor sit amet consectetur adipiscing elit. Nullam vestibulum justo nec velit tincidunt, sit amet malesuada ante.',
-    image: projeto2_01,
-    images: [projeto2_01, projeto2_02, projeto2_03, projeto2_04],
+    badge: 'Construção Residencial',
+    title: 'RPJ',
+    description: 'Construção residencial unifamiliar contemporânea com integração de volumes, acabamento refinado e rigoroso controle estrutural no Pico do Jaraguá.',
+    image: rpj_01,
+    images: [rpj_01, rpj_02, rpj_03, rpj_04],
     specs: {
       areaConstruida: '450m²',
       tipoObra: 'Construção Residencial',
@@ -63,68 +62,68 @@ const projects: ProjectItem[] = [
   {
     id: 2,
     badge: 'Construção Residencial',
-    title: 'Obras Mara',
-    description: 'Gerenciamento técnico e execução estrutural completa para empreendimento corporativo com rigoroso controle de custos e cronograma.',
-    image: projeto4_01,
-    images: [projeto4_01, projeto4_02, projeto4_03, projeto4_04],
+    title: 'MJP',
+    description: 'Gerenciamento executivo e acompanhamento estrutural completo de residência de alto padrão com controle de custos e cronograma em linha de base.',
+    image: mjp_01,
+    images: [mjp_01, mjp_02, mjp_03, mjp_04],
     specs: {
       areaConstruida: '520m²',
       tipoObra: 'Construção Residencial',
       prazoExecucao: '18 meses',
       anoConclusao: '2023',
-      localizacao: 'Pico do Jaraguá - São Paulo',
-      regimeExecucao: 'Adm. de obras'
+      localizacao: 'Jardim Paulistano, São Paulo',
+      regimeExecucao: 'Administração de Obras'
     },
     className: styles.card2
   },
   {
     id: 3,
-    badge: 'PROJETO RESIDENCIAL',
-    title: 'CMG - CASA MARIA GUSTAVO',
-    description: 'Construção residencial de alto padrão executada com foco em qualidade, gestão eficiente e atenção aos detalhes.',
-    image: projeto5_01,
-    images: [projeto5_01, projeto5_02, projeto5_03, projeto5_04],
+    badge: 'Reforma Residencial',
+    title: 'CMG',
+    description: 'Reforma e modernização de residência de alto padrão com detalhamento executivo, marcenaria nobre e integração completa de instalações.',
+    image: cmg_01,
+    images: [cmg_01, cmg_02, cmg_03, cmg_04],
     specs: {
       areaConstruida: '500m²',
-      tipoObra: 'Residencial Residencial',
+      tipoObra: 'Reforma Residencial',
       prazoExecucao: '7 meses',
       anoConclusao: '2023',
-      localizacao: 'Jd. Paulistano',
-      regimeExecucao: 'Adm. de obras'
+      localizacao: 'Jardim Paulistano, São Paulo',
+      regimeExecucao: 'Administração de Obras'
     },
     className: styles.card3
   },
   {
     id: 4,
-    badge: 'PROJETO RESIDENCIAL',
-    title: 'AMP - Apartamento',
-    description: 'Construção unifamiliar contemporânea com estrutura mista, amplas esquadrias.',
-    image: projeto1_01,
-    images: [projeto1_01, projeto1_02, projeto1_03, projeto1_04],
+    badge: 'Reforma Residencial',
+    title: 'AMP',
+    description: 'Reforma integral de apartamento residencial em Perdizes, compatibilização de infraestrutura predial e acabamentos contemporâneos.',
+    image: amp_01,
+    images: [amp_01, amp_02, amp_03, amp_04],
     specs: {
       areaConstruida: '420m²',
       tipoObra: 'Reforma Residencial',
       prazoExecucao: '3 meses',
       anoConclusao: '2022',
       localizacao: 'Perdizes, São Paulo',
-      regimeExecucao: 'Empreitada global'
+      regimeExecucao: 'Empreitada Global'
     },
     className: styles.card4
   },
   {
     id: 5,
-    badge: 'PROJETO RESIDENCIAL',
-    title: 'Obras Mamede',
-    description: 'Construção residencial de alto padrão executada com foco em qualidade',
-    image: projeto3_01,
-    images: [projeto3_01, projeto3_02, projeto3_03, projeto3_04],
+    badge: 'Construção Residencial',
+    title: 'RVM',
+    description: 'Residência unifamiliar de grande porte com estrutura mista, caixilharia especial e alto padrão de acabamento executivo.',
+    image: rvm_01,
+    images: [rvm_01, rvm_02, rvm_03, rvm_04],
     specs: {
       areaConstruida: '2000m²',
-      tipoObra: 'Residencial Residencial',
-      prazoExecucao: '3 meses',
+      tipoObra: 'Construção Residencial',
+      prazoExecucao: '24 meses',
       anoConclusao: '2025',
-      localizacao: 'Jd. Paulistano',
-      regimeExecucao: 'Empreitada global'
+      localizacao: 'Jardim Paulistano, São Paulo',
+      regimeExecucao: 'Empreitada Global'
     },
     className: styles.card5
   },

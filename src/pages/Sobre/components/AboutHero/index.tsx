@@ -4,7 +4,7 @@ import { ScrollReveal } from '../../../../components/ui/ScrollReveal';
 import { useCountUp } from '../../../../hooks/useCountUp';
 import styles from './AboutHero.module.css';
 
-import illustrationSobre from '../../../../assets/illustrationSobre.svg';
+import illustrationSobre from '../../../../assets/illustrationSobre.webp';
 
 interface StatItemProps {
   target: number;

@@ -3,8 +3,8 @@ import { Container } from '../../../../components/layout/Container';
 import { ScrollReveal } from '../../../../components/ui/ScrollReveal';
 import styles from './Feedbacks.module.css';
 
-import illustrationProjeto1 from '../../../../assets/illustrationProjeto1.svg';
-import illustrationProjeto2 from '../../../../assets/illustrationProjeto2.svg';
+import destaqueProjeto2 from '../../../../assets/destaque_projeto2.webp';
+import feedbackRpj from '../../../../assets/feedback_rpj.webp';
 
 const ArrowLeft = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -23,25 +23,27 @@ const ArrowRight = () => (
 const feedbacks = [
   {
     id: 1,
+    monogram: "RPJ",
     paragraphs: [
-      "A Nova Dimensão foi a escolha certa para a conclusão da minha clínica veterinária.",
-      "A equipe mostrou profissionalismo excepcional em todos os aspectos, desde o planejamento até a execução do projeto. Eles entenderam perfeitamente as necessidades específicas da clínica e forneceram soluções personalizadas que atenderão perfeitamente nossa equipe, clientes e nossos bichinhos."
+      "A gestão técnica e o acompanhamento diário da Nova Dimensão foram decisivos para a entrega da nossa casa rigorosamente dentro do prazo e do orçamento previstos.",
+      "O rigor com o projeto e a clareza dos relatórios semanais nos deram total previsibilidade durante toda a obra."
     ],
-    authorName: "Darrell Steward",
-    authorRole: "MANAGING DIRECTOR, NEXUS CORP",
-    authorAvatar: "https://randomuser.me/api/portraits/men/32.jpg",
-    projectImage: illustrationProjeto1,
+    authorName: "Proprietário - Residência RPJ",
+    authorRole: "Construção Residencial | Pico do Jaraguá",
+    projectImage: feedbackRpj,
+    projectAlt: "Residência RPJ - Obra executada pela Nova Dimensão Engenharia",
   },
   {
     id: 2,
+    monogram: "CMG",
     paragraphs: [
-      "A Nova Dimensão foi a escolha certa para a conclusão da minha clínica veterinária.",
-      "A equipe mostrou profissionalismo excepcional em todos os aspectos, desde o planejamento até a execução do projeto. Eles entenderam perfeitamente as necessidades específicas da clínica e forneceram soluções personalizadas que atenderão perfeitamente nossa equipe, clientes e nossos bichinhos."
+      "A compatibilização prévia de todos os projetos complementares evitou retrabalhos e custos imprevistos na reforma.",
+      "Profissionalismo impecável da equipe de engenharia do início ao fim."
     ],
-    authorName: "Sarah Connor",
-    authorRole: "CEO, TECH SOLUTIONS",
-    authorAvatar: "https://randomuser.me/api/portraits/women/44.jpg",
-    projectImage: illustrationProjeto2,
+    authorName: "Proprietário - Residência CMG",
+    authorRole: "Reforma Residencial | Jardim Paulistano",
+    projectImage: destaqueProjeto2,
+    projectAlt: "Residência CMG - Reforma executada pela Nova Dimensão Engenharia",
   }
 ];
 
@@ -92,7 +94,9 @@ export function Feedbacks() {
                 </div>
 
                 <div className={styles.authorBox}>
-                  <img src={currentFeedback.authorAvatar} alt={currentFeedback.authorName} className={styles.authorAvatar} loading="lazy" />
+                  <div className={styles.monogramBadge} aria-label={`Selo monograma ${currentFeedback.monogram}`}>
+                    {currentFeedback.monogram}
+                  </div>
                   <div className={styles.authorInfo}>
                     <span className={styles.authorName}>{currentFeedback.authorName}</span>
                     <span className={styles.authorRole}>{currentFeedback.authorRole}</span>
@@ -106,7 +110,7 @@ export function Feedbacks() {
           <div className={styles.rightColumn}>
             <ScrollReveal direction="up" delay={200}>
               <div key={key} className={`${styles.imageFrame} ${styles.fadeEnter}`} onClick={() => openModal(currentFeedback.projectImage)}>
-                <img src={currentFeedback.projectImage} alt={`Projeto executado para ${currentFeedback.authorName}`} className={styles.projectImage} loading="lazy" />
+                <img src={currentFeedback.projectImage} alt={currentFeedback.projectAlt} className={styles.projectImage} loading="lazy" />
               </div>
             </ScrollReveal>
           </div>

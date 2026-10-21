@@ -4,7 +4,7 @@ import { openWhatsApp } from '../../../../utils/whatsapp';
 import styles from './Sustainability.module.css';
 
 import detailsNovaDimensao from '../../../../assets/detailsNovaDimensao.svg';
-import illustrationSustentavel from '../../../../assets/illustrationSustentavel.svg';
+import illustrationSustentavel from '../../../../assets/illustrationSustentavel.webp';
 
 export function Sustainability() {
   return (

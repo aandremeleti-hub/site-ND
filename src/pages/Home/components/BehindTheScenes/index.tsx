@@ -2,10 +2,10 @@ import { Container } from '../../../../components/layout/Container';
 import { ScrollReveal } from '../../../../components/ui/ScrollReveal';
 import styles from './BehindTheScenes.module.css';
 
-import illustrationBast01 from '../../../../assets/illustrationBast01.svg';
-import illustrationBast02 from '../../../../assets/illustrationBast02.svg';
-import illustrationBast03 from '../../../../assets/illustrationBast03.svg';
-import illustrationBast04 from '../../../../assets/illustrationBast04.svg';
+import bast01 from '../../../../assets/bastidores/bast01.webp';
+import bast02 from '../../../../assets/bastidores/bast02.webp';
+import bast03 from '../../../../assets/bastidores/bast03.webp';
+import bast04 from '../../../../assets/bastidores/bast04.webp';
 
 import iconCelular from '../../../../assets/iconCelular.svg';
 import iconList from '../../../../assets/iconList.svg';
@@ -38,14 +38,14 @@ export function BehindTheScenes() {
           <div className={styles.imagesColumn}>
             <ScrollReveal direction="up">
               <div className={styles.masonryCol}>
-                <img src={illustrationBast01} alt="Estrutura de obra de alto padrão com detalhamento técnico" className={styles.imgTall} loading="lazy" />
-                <img src={illustrationBast02} alt="Acompanhamento e nivelamento de piso na obra" className={styles.imgShort} loading="lazy" />
+                <img src={bast01} alt="Montagem estrutural e rigor técnico em canteiro de obras" className={styles.imgTall} loading="lazy" />
+                <img src={bast02} alt="Alinhamento e assentamento milimétrico de revestimentos" className={styles.imgShort} loading="lazy" />
               </div>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={200}>
               <div className={styles.masonryCol}>
-                <img src={illustrationBast03} alt="Profissional da engenharia inspecionando a qualidade" className={styles.imgShort} loading="lazy" />
-                <img src={illustrationBast04} alt="Execução de armação e estrutura metálica" className={styles.imgTall} loading="lazy" />
+                <img src={bast03} alt="Supervisão técnica contínua e conferência de projeto em canteiro limpo" className={styles.imgShort} loading="lazy" />
+                <img src={bast04} alt="Acabamento de marcenaria de alta precisão e instalações embutidas" className={styles.imgTall} loading="lazy" />
               </div>
             </ScrollReveal>
           </div>

@@ -2,7 +2,7 @@ import { Container } from '../../../../components/layout/Container';
 import { ScrollReveal } from '../../../../components/ui/ScrollReveal';
 import styles from './ContactHero.module.css';
 
-import heroImg from '../../../../assets/illustrationContato.svg';
+import heroImg from '../../../../assets/fachada_nicolas_boer_399.webp';
 import iconEndereco from '../../../../assets/iconEndereco.svg';
 import iconEmail from '../../../../assets/iconEmail.svg';
 import iconRelogio from '../../../../assets/iconRelogio.svg';

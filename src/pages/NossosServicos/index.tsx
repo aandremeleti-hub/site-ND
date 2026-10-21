@@ -4,10 +4,10 @@ import { ServiceBlock } from './components/ServiceBlock';
 import { openWhatsApp } from '../../utils/whatsapp';
 
 // Import Illustrations
-import illustrationGerenciamento from '../../assets/illustrationGerenciamento.svg';
-// import illustrationObrasComerciais from '../../assets/illustrationObrasComerciais.svg';
-import illustrationObrasResidenciais from '../../assets/illustrationObrasResidenciais.svg';
-import illustrationProjetosEngenharia from '../../assets/illustrationProjetosEngenharia.svg';
+import illustrationGerenciamento from '../../assets/illustrationGerenciamento.webp';
+// import illustrationObrasComerciais (depreciado per alinhamento de escopo residencial)
+import illustrationObrasResidenciais from '../../assets/illustrationObrasResidenciais.webp';
+import illustrationProjetosEngenharia from '../../assets/illustrationProjetosEngenharia.webp';
 
 export function NossosServicos() {
   return (
