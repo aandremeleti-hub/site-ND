@@ -2,7 +2,7 @@ import { Container } from '../../../../components/layout/Container';
 import { Button } from '../../../../components/ui/Button';
 import { smoothScrollTo } from '../../../../utils/scroll';
 import { openWhatsApp } from '../../../../utils/whatsapp';
-import videoND from '../../../../assets/VideoND.mp4';
+import videoMain from '../../../../assets/video_main.mp4';
 import styles from './Hero.module.css';
 
 export function Hero() {
@@ -20,7 +20,7 @@ export function Hero() {
         playsInline
         className={styles.videoBackground}
       >
-        <source src={videoND} type="video/mp4" />
+        <source src={videoMain} type="video/mp4" />
       </video>
       <div className={styles.overlay} />
 
